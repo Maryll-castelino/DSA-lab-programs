@@ -166,6 +166,7 @@ void insertNodeAtBeginning(int data)
         printf("DATA INSERTED SUCCESSFULLY\n");
     }
 }
+
 void insertNodeAtEnd(int data1)
 {
     struct node *newNode,*temp1; 
@@ -188,6 +189,7 @@ void insertNodeAtEnd(int data1)
         printf("DATA INSERTED SUCCESSFULLY\n");
     }
 }
+
 void insertNodeInMiddle(int data1,int position)
 {
 	int i;
@@ -243,8 +245,7 @@ void deleteLastNode()
 	free(toDelete);
 }
 
-  
-  void deleteFirstNode()
+void deleteFirstNode()
 {
     struct node *toDelete;
  
@@ -265,6 +266,7 @@ void deleteLastNode()
         printf("SUCCESSFULLY DELETED FIRST NODE FROM LIST\n");
     }
 }
+
 void deleteMiddleNode(int position)
 {
 	int i;
@@ -301,7 +303,6 @@ void deleteMiddleNode(int position)
 			}
 			}
 		}
-
 
 void traverseList(struct node *header)
 {

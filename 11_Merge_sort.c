@@ -1,11 +1,15 @@
 #include <stdio.h> 
 #include <stdlib.h> 
 
-void merge(int arr[], int l, int m, int r) 
+// l - lower bound
+// m - mid point
+// u - upper bound
+
+void merge(int arr[], int l, int m, int u) 
 { 
 	int i, j, k; 
 	int n1 = m - l + 1; 
-	int n2 = r - m; 
+	int n2 = u - m; 
 
 	int L[n1], R[n2]; 
 
@@ -43,14 +47,14 @@ void merge(int arr[], int l, int m, int r)
 	} 
 } 
 
-void mergeSort(int arr[], int l, int r) 
+void mergeSort(int arr[], int l, int u) 
 { 
-	if (l < r) { 
-		int m = l + (r - l) / 2; 
+	if (l < u) { 
+		int m = l + (u - l) / 2; 
 		mergeSort(arr, l, m); 
-		mergeSort(arr, m + 1, r); 
+		mergeSort(arr, m + 1, u); 
 
-		merge(arr, l, m, r); 
+		merge(arr, l, m, u); 
 	} 
 } 
 
